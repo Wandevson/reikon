@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/assets/Vector.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nabla&display=swap" rel="stylesheet">
+    <title>ReikoN</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h2>
+          ReikoN
+        </h2>
+      </div>
+    </header>
+    
+    <main>
+      <div class="btn-song">
+        <img id="icon" src="/assets/play.png">
+      </div>
+
+      <audio id="mySong">
+        <source src="/assets/song.mp3" type="audio/mp3">
+      </audio>
+
+  <script>
+    var mySong = document.getElementById("mySong");
+    var icon = document.getElementById("icon");
+
+    icon.onclick = function(){
+      if(mySong.paused){
+        mySong.play();
+        icon.src="assets/pause.png"
+      }else{
+          mySong.pause();
+          icon.src="assets/play.png"
+        }
+      }
+  </script>
+    </main>
+  </body>
+</html>
